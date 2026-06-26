@@ -1,3 +1,5 @@
+import {calcResiduo} from "./calculo.js"
+
 const formColeta = document.querySelector('#form-coleta')
 const divResult = document.querySelector('#div-result')
 
@@ -26,13 +28,13 @@ const addEmpresa = (objEmpresa) => {
     listEmpresas()
 }
 
-const calc
+
 
 const listEmpresas = () => {
 
     divResult.innerHTML = '' 
 
     empresas.forEach((elem, i) => {
-        divResult.innerHTML += `${i + 1} ${elem.nome} <br> ${elem.descricao} <br> ${elem.residuo}t`
+        divResult.innerHTML += `${i + 1} ${elem.nome} <br> ${elem.descricao} <br> ${parseFloat(elem.residuo).toFixed(2).replace('.',',')}t - ${calcResiduo(elem)} <br>`
     })
 }
