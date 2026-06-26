@@ -10,6 +10,27 @@
     <title>Coleta de Resíduos</title>
 </head>
 <body>
+
+    <div id="geral">
+
+        <form id="form-coleta">
+             <label for="nome">EMPRESA</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="descricao">DESCREVA SUA EMPRESA</label>
+            <input type="text" name="descricao" id="descricao">
+
+             <label for="residuo">TOTAL DE RESIDUOS COLETADOS</label>
+            <input type="number" name="residuo" id="residuo" placeholder="TONELADAS">
+
+             <button type="submit" id="btn-add">Adicionar</button>
+               <button type="reset" id="btn-limpar">Limpar</button>
+
+        </form>
+
+        <div id="div-result"></div>
+
+    </div>
     
 </body>
 </html>
