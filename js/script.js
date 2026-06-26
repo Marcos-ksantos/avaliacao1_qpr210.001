@@ -40,9 +40,11 @@ const listEmpresas = () => {
         const valorResiduo = elem.residuo * 220;
         const valorF = valorResiduo + calcResiduo(elem);
 
-        divResult.innerHTML += `${i + 1} ${elem.nome} <br>
-         ${elem.descricao} <br>
-         ${parseFloat(elem.residuo).toFixed(2).replace('.',',')}t - ${calcResiduo(elem)} <br>
-        ${parseFloat(valorResiduo).toFixed(2).replace('.',',')} <br>`
+        divResult.innerHTML += `${i + 1} - ${elem.nome} <br>
+         DESCRIÇÃO:${elem.descricao} <br>
+         SUA EMPRESA COLETOU:${parseFloat(elem.residuo).toFixed(0).replace('.',',')}t <br> 
+        RECEBERA :${parseFloat(valorResiduo).toFixed(2).replace('.',',')}R$ <br>
+        COM BONÛS DE :${calcResiduo(elem).toFixed(2).replace('.',',')}R$ <br>
+        VALOR TOTAL DE :${parseFloat(valorF).toFixed(2).replace('.',',')}R$ <br>`
     })
 }
