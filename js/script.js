@@ -35,6 +35,14 @@ const listEmpresas = () => {
     divResult.innerHTML = '' 
 
     empresas.forEach((elem, i) => {
-        divResult.innerHTML += `${i + 1} ${elem.nome} <br> ${elem.descricao} <br> ${parseFloat(elem.residuo).toFixed(2).replace('.',',')}t - ${calcResiduo(elem)} <br>`
+
+        const valorResiduo = elem.residuo * 220;
+         
+
+        divResult.innerHTML += `${i + 1} ${elem.nome} <br>
+         ${elem.descricao} <br>
+         ${parseFloat(elem.residuo).toFixed(2).replace('.',',')}t - ${calcResiduo(elem)} <br>
+        ${parseFloat(valorResiduo).toFixed(2).replace('.',',')} <br>
+        ${parseFloat(somaFinal).toFixed(2).replace('.',',')}`
     })
 }
